@@ -1,0 +1,45 @@
+$ coverage run -m pytest -v CodeCoverageTest_PES1UG24AM286_fuel_station.py
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/claude/am286_se_lab1/LAB6
+plugins: platformdirs-4.13.0, anyio-4.15.1
+collecting ... collected 11 items
+
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_unknown_grade_raises PASSED [  9%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_negative_litres_raises PASSED [ 18%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_within_covered_litres PASSED [ 27%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_premium_gold_bulk_purchase PASSED [ 36%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_diesel_small_extra PASSED [ 45%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_fleet_request PASSED [ 54%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_over_limit PASSED [ 63%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_pump_allowed PASSED [ 72%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_card_payment_at_night_active PASSED [ 81%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_cash_warning PASSED [ 90%]
+CodeCoverageTest_PES1UG24AM286_fuel_station.py::test_cash_timed_out PASSED [100%]
+
+============================== 11 passed in 0.03s ==============================
+$ coverage report -m
+Name                                             Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------
+CodeCoverageTest_PES1UG24AM286_fuel_station.py      26      0   100%
+fuel_station.py                                     37      0   100%
+------------------------------------------------------------------------------
+TOTAL                                               63      0   100%
+$ coverage run --branch -m pytest CodeCoverageTest_PES1UG24AM286_fuel_station.py
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/claude/am286_se_lab1/LAB6
+plugins: platformdirs-4.13.0, anyio-4.15.1
+collected 11 items
+
+CodeCoverageTest_PES1UG24AM286_fuel_station.py ...........               [100%]
+
+============================== 11 passed in 0.04s ==============================
+$ coverage report -m
+Name                                             Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------------
+CodeCoverageTest_PES1UG24AM286_fuel_station.py      26      0      0      0   100%
+fuel_station.py                                     37      0     26      1    98%   21->23
+--------------------------------------------------------------------------------------------
+TOTAL                                               63      0     26      1    99%
