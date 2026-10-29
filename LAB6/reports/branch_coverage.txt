@@ -1,0 +1,61 @@
+$ coverage run --branch -m pytest -v BranchCoverageTest_PES1UG24AM286_fuel_station.py
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/claude/am286_se_lab1/LAB6
+plugins: platformdirs-4.13.0, anyio-4.15.1
+collecting ... collected 44 items
+
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_unknown_grade_raises[kerosene] PASSED [  2%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_unknown_grade_raises[] PASSED [  4%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_unknown_grade_raises[Regular] PASSED [  6%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_unknown_grade_raises[None] PASSED [  9%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_negative_litres_raises PASSED [ 11%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_zero_litres_is_valid_and_free PASSED [ 13%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_gold_regular_gets_extra_covered_litres PASSED [ 15%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_silver_regular_no_extra_covered_litres PASSED [ 18%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_gold_diesel_does_not_extend_voucher PASSED [ 20%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_boundary[regular-10-0] PASSED [ 22%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_boundary[regular-11-105] PASSED [ 25%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_boundary[premium-15-0] PASSED [ 27%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_boundary[diesel-20-0] PASSED [ 29%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_boundary[diesel-21-90] PASSED [ 31%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_diesel_rate PASSED [ 34%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_petrol_rate PASSED [ 36%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_exactly_30_no_bulk_discount PASSED [ 38%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_extra_31_gets_bulk_discount PASSED [ 40%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_bulk_gold_petrol_extra_discount PASSED [ 43%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_bulk_non_gold_petrol_no_extra_discount PASSED [ 45%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_bulk_gold_diesel_extra_discount PASSED [ 47%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_bulk_non_gold_diesel_no_extra_discount PASSED [ 50%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_fleet_limits[200-0-True] PASSED [ 52%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_fleet_limits[201-0-False] PASSED [ 54%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_fleet_limits[100-5-True] PASSED [ 56%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_over_60_rejected PASSED [ 59%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_exactly_60_allowed PASSED [ 61%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_container_limit[0-True] PASSED [ 63%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_container_limit[1-True] PASSED [ 65%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_non_fleet_container_limit[2-False] PASSED [ 68%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[60-True-False-active] PASSED [ 70%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[59-True-False-warning] PASSED [ 72%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[45-True-False-warning] PASSED [ 75%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[44-True-False-timed_out] PASSED [ 77%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[90-True-True-active] PASSED [ 79%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[75-True-True-warning] PASSED [ 81%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[74-True-True-timed_out] PASSED [ 84%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[30-False-False-active] PASSED [ 86%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[15-False-False-warning] PASSED [ 88%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[14-False-False-timed_out] PASSED [ 90%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[60-False-True-active] PASSED [ 93%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[45-False-True-warning] PASSED [ 95%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_status_all_paths[44-False-True-timed_out] PASSED [ 97%]
+BranchCoverageTest_PES1UG24AM286_fuel_station.py::test_session_zero_seconds_times_out PASSED [100%]
+
+============================== 44 passed in 0.10s ==============================
+$ coverage report -m
+Name                                               Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------
+BranchCoverageTest_PES1UG24AM286_fuel_station.py      52      0      0      0   100%
+fuel_station.py                                       37      0     26      0   100%
+----------------------------------------------------------------------------------------------
+TOTAL                                                 89      0     26      0   100%
